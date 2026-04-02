@@ -4,89 +4,54 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 210 20% 98%;
+    --foreground: 215 28% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 28% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 28% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 210 85% 38%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 20% 94%;
+    --secondary-foreground: 215 28% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 16% 93%;
+    --muted-foreground: 215 16% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 85% 38%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 210 85% 38%;
 
-    --radius: 0.5rem;
+    --radius: 0.375rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* BLITZTOP brand */
+    --brand-blue: #1a6fc4;
+    --brand-blue-dark: #0e4f8f;
+    --brand-blue-light: #3b8fd4;
+    --brand-gray-dark: #1a2436;
+    --brand-gray: #3d4f63;
+    --brand-gray-mid: #7a8fa6;
+    --brand-gray-light: #e8edf3;
+    --brand-white: #f5f8fc;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-background: 215 28% 12%;
+    --sidebar-foreground: 210 20% 94%;
+    --sidebar-primary: 210 85% 38%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 215 28% 18%;
+    --sidebar-accent-foreground: 210 20% 94%;
+    --sidebar-border: 215 28% 20%;
+    --sidebar-ring: 210 85% 38%;
   }
 }
 
@@ -95,7 +60,216 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--brand-gray-dark);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--brand-gray-dark);
+  }
+}
+
+@layer utilities {
+  .font-montserrat {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .font-ibm {
+    font-family: "IBM Plex Sans", sans-serif;
+  }
+
+  .text-brand-blue {
+    color: var(--brand-blue);
+  }
+  .text-brand-dark {
+    color: var(--brand-gray-dark);
+  }
+  .text-brand-gray {
+    color: var(--brand-gray);
+  }
+  .text-brand-mid {
+    color: var(--brand-gray-mid);
+  }
+  .bg-brand-blue {
+    background-color: var(--brand-blue);
+  }
+  .bg-brand-blue-dark {
+    background-color: var(--brand-blue-dark);
+  }
+  .bg-brand-dark {
+    background-color: var(--brand-gray-dark);
+  }
+  .bg-brand-light {
+    background-color: var(--brand-gray-light);
+  }
+  .bg-brand-white {
+    background-color: var(--brand-white);
+  }
+  .border-brand {
+    border-color: var(--brand-blue);
+  }
+  .border-brand-light {
+    border-color: var(--brand-gray-light);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 font-montserrat font-700 text-sm uppercase tracking-widest text-white rounded-sm transition-all duration-200;
+    background-color: var(--brand-blue);
+    letter-spacing: 0.12em;
+  }
+  .btn-primary:hover {
+    background-color: var(--brand-blue-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(26, 111, 196, 0.3);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-4 font-montserrat font-600 text-sm uppercase tracking-widest rounded-sm border-2 transition-all duration-200;
+    border-color: var(--brand-blue);
+    color: var(--brand-blue);
+    letter-spacing: 0.12em;
+  }
+  .btn-outline:hover {
+    background-color: var(--brand-blue);
+    color: white;
+  }
+
+  .section-tag {
+    @apply inline-block font-montserrat font-600 text-xs uppercase tracking-widest mb-4;
+    color: var(--brand-blue);
+    letter-spacing: 0.2em;
+  }
+
+  .section-title {
+    @apply font-montserrat font-800 text-3xl md:text-4xl mb-6;
+    color: var(--brand-gray-dark);
+  }
+
+  .card-service {
+    @apply p-8 rounded-sm border bg-white transition-all duration-300 cursor-pointer;
+    border-color: var(--brand-gray-light);
+  }
+  .card-service:hover {
+    border-color: var(--brand-blue);
+    box-shadow: 0 12px 40px rgba(26, 111, 196, 0.1);
+    transform: translateY(-4px);
+  }
+
+  .divider-blue {
+    @apply block w-12 h-0.5 mb-6;
+    background-color: var(--brand-blue);
+  }
+
+  /* Grid pattern background */
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(26, 111, 196, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26, 111, 196, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Gradient hero overlay */
+  .hero-overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(14, 79, 143, 0.97) 0%,
+      rgba(26, 111, 196, 0.92) 50%,
+      rgba(26, 36, 54, 0.98) 100%
+    );
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-delay-1 {
+    animation: fadeIn 0.6s ease 0.1s both;
+  }
+  .animate-fade-in-delay-2 {
+    animation: fadeIn 0.6s ease 0.2s both;
+  }
+  .animate-fade-in-delay-3 {
+    animation: fadeIn 0.6s ease 0.35s both;
+  }
+  .animate-fade-in-delay-4 {
+    animation: fadeIn 0.6s ease 0.5s both;
+  }
+
+  .nav-link {
+    @apply font-ibm text-sm font-500 transition-colors duration-150;
+    color: var(--brand-gray);
+  }
+  .nav-link:hover {
+    color: var(--brand-blue);
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border rounded-sm font-ibm text-sm outline-none transition-all duration-200;
+    border-color: var(--brand-gray-light);
+    background: white;
+    color: var(--brand-gray-dark);
+  }
+  .input-field:focus {
+    border-color: var(--brand-blue);
+    box-shadow: 0 0 0 3px rgba(26, 111, 196, 0.1);
+  }
+  .input-field::placeholder {
+    color: var(--brand-gray-mid);
+  }
+
+  .faq-item {
+    @apply border-b py-5 cursor-pointer;
+    border-color: var(--brand-gray-light);
+  }
+
+  .blog-card {
+    @apply bg-white border rounded-sm overflow-hidden transition-all duration-300;
+    border-color: var(--brand-gray-light);
+  }
+  .blog-card:hover {
+    border-color: var(--brand-blue);
+    box-shadow: 0 8px 32px rgba(26, 111, 196, 0.1);
+    transform: translateY(-3px);
+  }
+
+  .stat-number {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: var(--brand-blue);
+    line-height: 1;
+  }
+
+  .review-card {
+    @apply p-6 bg-white border rounded-sm;
+    border-color: var(--brand-gray-light);
+    border-left: 3px solid var(--brand-blue);
   }
 }
