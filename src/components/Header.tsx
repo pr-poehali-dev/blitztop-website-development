@@ -72,8 +72,8 @@ export default function Header() {
               href="tel:+79064205420"
               className="hidden md:flex items-center gap-2 font-montserrat font-600 text-sm transition-colors duration-150"
               style={{ color: 'var(--brand-gray-dark)' }}
-              onMouseEnter={e => (e.currentTarget.style.color = 'var(--brand-blue)')}
-              onMouseLeave={e => (e.currentTarget.style.color = 'var(--brand-gray-dark)')}
+              onMouseEnter={e => { e.currentTarget.style.color = 'var(--brand-blue)'; }}
+              onMouseLeave={e => { e.currentTarget.style.color = 'var(--brand-gray-dark)'; }}
             >
               <Icon name="Phone" size={14} />
               +7 906 420-54-20
@@ -87,8 +87,8 @@ export default function Header() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-8 h-8 rounded-sm transition-all duration-150"
                 style={{ background: 'var(--brand-gray-light)' }}
-                onMouseEnter={e => (e.currentTarget.style.background = 'var(--brand-blue)', (e.currentTarget.querySelector('svg') as SVGElement)?.setAttribute('stroke', 'white'))}
-                onMouseLeave={e => (e.currentTarget.style.background = 'var(--brand-gray-light)')}
+                onMouseEnter={e => { e.currentTarget.style.background = 'var(--brand-blue)'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'var(--brand-gray-light)'; }}
                 title="Telegram"
               >
                 <Icon name="Send" size={14} className="text-brand-gray" />

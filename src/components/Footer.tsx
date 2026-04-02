@@ -76,8 +76,8 @@ export default function Footer() {
                     to={s.href}
                     className="font-ibm text-sm transition-colors duration-150"
                     style={{ color: 'rgba(255,255,255,0.5)' }}
-                    onMouseEnter={e => (e.currentTarget.style.color = 'white')}
-                    onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.5)')}
+                    onMouseEnter={e => { e.currentTarget.style.color = 'white'; }}
+                    onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.5)'; }}
                   >
                     {s.label}
                   </Link>
@@ -98,8 +98,8 @@ export default function Footer() {
                     to={c.href}
                     className="font-ibm text-sm transition-colors duration-150"
                     style={{ color: 'rgba(255,255,255,0.5)' }}
-                    onMouseEnter={e => (e.currentTarget.style.color = 'white')}
-                    onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.5)')}
+                    onMouseEnter={e => { e.currentTarget.style.color = 'white'; }}
+                    onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.5)'; }}
                   >
                     {c.label}
                   </Link>
@@ -118,8 +118,8 @@ export default function Footer() {
                 href="tel:+79064205420"
                 className="flex items-center gap-3 font-ibm text-sm transition-colors duration-150"
                 style={{ color: 'rgba(255,255,255,0.7)' }}
-                onMouseEnter={e => (e.currentTarget.style.color = 'white')}
-                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
+                onMouseEnter={e => { e.currentTarget.style.color = 'white'; }}
+                onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; }}
               >
                 <Icon name="Phone" size={14} style={{ color: 'var(--brand-blue-light)' }} />
                 +7 906 420-54-20
@@ -128,8 +128,8 @@ export default function Footer() {
                 href="mailto:info@blitztop.ru"
                 className="flex items-center gap-3 font-ibm text-sm transition-colors duration-150"
                 style={{ color: 'rgba(255,255,255,0.7)' }}
-                onMouseEnter={e => (e.currentTarget.style.color = 'white')}
-                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
+                onMouseEnter={e => { e.currentTarget.style.color = 'white'; }}
+                onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; }}
               >
                 <Icon name="Mail" size={14} style={{ color: 'var(--brand-blue-light)' }} />
                 info@blitztop.ru
